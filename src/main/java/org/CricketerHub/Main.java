@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         int maxCricketers = 0;
+        Cricketer[] cricketerDatabase;
         int input = 0 ;
         User user = new User();
 
@@ -12,9 +13,11 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the maximum number of Cricketers your organization can manage.");
         maxCricketers = scanner.nextInt();
+        cricketerDatabase = new Cricketer[maxCricketers];
+        user.setCricketerDatabase(cricketerDatabase);
         scanner.nextLine();
         while (true) {
-            System.out.println("What do you want to do? \n" +
+            System.out.println("\nWhat do you want to do? \n" +
                     "1. Enter new Cricketers (password required). \n" +
                     "2. Change information of a Cricketer (password required). \n" +
                     "3. Display available Cricketers with a bowlingAvg greater than user value. \n" +
@@ -34,10 +37,10 @@ public class Main {
                             user.updateCricketer();
                         break;
                     case 3:
-                        user.findCricketersBy();
+                        Cricketer.findCricketersBy();
                         break;
                     case 4:
-                        user.findAllRounders();
+                        Cricketer.findAllRounders();
                         break;
                     case 5:
                         System.out.println("Closing the Application. Goodbye!");

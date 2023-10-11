@@ -86,7 +86,7 @@ public class Cricketer {
     /**
      * @return no of cricketer objects have been created.
      */
-    public int getNumberOfCricketers(){
+    public static int getNumberOfCricketers(){
         return numberOfCricketers;
     }
 
@@ -106,5 +106,13 @@ public class Cricketer {
                 "Strike Rate: " + strikeRate +
                 "Economy Rate: " + economyRate +
                 "Availability: " + (isAvailable?"isAvailable":"notAvailable");
+    }
+
+    public static void findCricketersBy(){
+
+    }
+
+    public static void findAllRounders(){
+
     }
 }
