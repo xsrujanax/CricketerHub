@@ -64,11 +64,14 @@ public class User {
                 break;
             }
             else {
+                //counter for invalid attempts
                 maxWrongAttempts ++;
                 if(wrongAttempts < 2){
                     wrongAttempts++;
                     System.out.println("Invalid password," + (3 - wrongAttempts) + " attempts remaining.");
                 }
+
+                //return to main menu if user enters wrong password 3 times or if suspicious activity is found
                 else{
                     System.out.println("\u001B[31mInvalid password, returning to main menu.\u001B[0m\n" );
                     if(suspiciousActivity()){
@@ -156,7 +159,7 @@ public class User {
                     validInput = true;
 
                 } catch (Exception e) {
-                    System.out.println("Error adding player "+ + (i+1) +" check the input " );
+                    System.out.println("Error adding player "+ (i+1) +" check the input " );
                 }
             }
         }
@@ -188,6 +191,7 @@ public class User {
                 long cricketerId = Long.parseLong(input);
                 Cricketer targetCricketer = null;
 
+                //check if the cricketer exists in the cricketer database
                 for( int i = 0 ; i < getNumberOfCricketers() ; i++ ){
                     if (cricketerDatabase[i] != null && cricketerDatabase[i].getCricketerId() == cricketerId) {
                         targetCricketer = cricketerDatabase[i];
@@ -196,10 +200,13 @@ public class User {
                     }
                 }
 
+                //if exists update cricketer details
                 if (targetCricketer != null) {
                     System.out.println("Cricketer : " + index + "\n" + targetCricketer);
                     updateCricketerDetails(targetCricketer,index);
-                } else {
+                }
+
+                else {
                     System.out.println("Cricketer not found.");
                 }
 
@@ -218,6 +225,7 @@ public class User {
     {
         Scanner scanner = new Scanner(System.in);
         boolean valid = true;
+
         while(valid) {
             System.out.println("\nCricketer : " + index + "\n" + targetCricketer +"\n");
             System.out.println("What information would you like to change? \n" +
@@ -234,6 +242,7 @@ public class User {
                 int option = scanner.nextInt();
                 scanner.nextLine();
 
+                //Update the cricketer attribute based on the user input
                 switch (option) {
                     case 1:
                         System.out.println("Enter the new Name");

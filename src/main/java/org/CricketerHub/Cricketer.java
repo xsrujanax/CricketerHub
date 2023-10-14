@@ -150,7 +150,7 @@ public class Cricketer {
         return  "ID: " + cricketerId +
                 "\nName: " + cricketerName +
                 "\nBatting Average: " + battingAvg +
-                "\nBowling Average: " + bowlingAvg +
+                "\nBalling Average: " + bowlingAvg +
                 "\nStrike Rate: " + strikeRate +
                 "\nEconomy Rate: " + economyRate +
                 "\nAvailability: " + (isAvailable?"isAvailable":"notAvailable");
