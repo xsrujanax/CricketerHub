@@ -4,6 +4,12 @@ import java.util.Scanner;
 
 import static org.CricketerHub.Cricketer.getNumberOfCricketers;
 
+// ..........................................
+// Assignment # 0!
+// © Srujana Guttula
+// Written by: Srujana Guttula - 40237663
+// ..........................................
+
 /**
  * This class handles all the implementations of user operations
  */

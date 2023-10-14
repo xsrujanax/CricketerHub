@@ -2,6 +2,12 @@ package org.CricketerHub;
 
 import java.util.Scanner;
 
+// ..........................................
+// Assignment # 0!
+// © Srujana Guttula
+// Written by: Srujana Guttula - 40237663
+// ..........................................
+
 /**
  * The main class for the CricketerHub application.
  */
