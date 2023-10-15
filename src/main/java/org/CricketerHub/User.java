@@ -265,7 +265,7 @@ public class User {
                         targetCricketer.setEconomyRate(scanner.nextFloat());
                         break;
                     case 6:
-                        System.out.println("Enter new Availability");
+                        System.out.println("Enter new Availability(true/false");
                         targetCricketer.setAvailable(scanner.nextBoolean());
                         break;
                     case 7:
